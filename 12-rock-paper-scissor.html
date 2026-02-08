@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock paper scissor</title>
+
+    <link rel="stylesheet" href="12-rock-paper-scissor.css">
+    <style>
+        /* body{
+            background-color: rgb(25,25,25);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+       }
+      
+
+       .move-icon{
+        height: 50px;
+        
+       }
+
+       .move-button{
+        background-color: transparent;
+        border: 3px solid white;
+        width: 120px;
+        height: 120px;
+        border-radius: 60px;
+        margin: 20px;
+        cursor: pointer;
+       }
+       .result{
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 50px;
+       }
+
+       .score{
+        margin-top: 60px;
+       }
+
+       .reset-score-button{
+        font-size: 15px;
+        background-color: white;
+        border: none;
+        padding: 8px 15px;
+        cursor: pointer;
+       } */
+
+    </style>
+</head>
+
+<body>
+    <h1 class="title">Rock Paper Scissor</h1>
+    <button class="move-button js-bt-rock">
+
+       <img class="move-icon" src="images/rock.png" alt="Rock">
+
+    </button>
+
+    <button class="move-button js-bt-paper">
+        <img src="images/paper.png" alt="paper" class="move-icon">
+    </button>
+
+    <button class="move-button js-bt-scissor">
+        <img src="images/scissor.png" alt="scissor" class="move-icon">
+    </button>
+
+    <p class="js-result result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score score"></p>
+
+    <button class="reset-score-button" onclick="
+        score.wins=0;
+        score.lose=0;
+        score.ties=0;
+    localStorage.removeItem('score');
+        alert('score has been reset');
+        updateScore();
+    ">
+        Rest Button
+    </button>
+
+    <button class="auto-play-button" onclick="
+    autoPlay();
+    ">Auto Play</button>
+
+
+    <Script src="12-rock-paper-scissor.js"></Script>
+</body>
+
+</html>
